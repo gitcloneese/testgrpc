@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package goproto_test;
+
+//定义服务
+service Helloserver {
+	rpc Sayhello(HelloReq) returns (HelloResp){}
+	rpc Sayname(NameReq) returns (NameResp){}
+	
+}
+message HelloReq{
+	string name = 1;
+}
+message HelloResp{
+	string msg = 1;	
+}
+message NameReq{
+	string name = 1;
+}
+message NameResp{
+	string msg = 1;
+}
